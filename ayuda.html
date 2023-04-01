@@ -1,313 +1,585 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Vuela Lejos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container">
-            <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+      <div class="container">
+        <button
+          class="navbar-toggler text-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-light"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-light">
+            <li class="nav-item">
+              <a class="nav-link text-light" aria-current="page" href="index.html"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="destinos.html">Destinos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="hoteles.html">Hoteles</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Ayuda
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="ayuda.html">Centro de Ayuda</a>
+                </li>
+                <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="..."
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Buscar
             </button>
-            <div class="collapse navbar-collapse text-light" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-light">
-                    <li class="nav-item">
-                        <a class="nav-link text-light" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="destinos.html">Destinos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Hoteles</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Ayuda
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="ayuda.html">Centro de Ayuda</a></li>
-                            <li><a class="dropdown-item" href="#">Contacto</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="..." aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
-            </div>
+          </form>
         </div>
+      </div>
     </nav>
 
     <div class="container my-5">
-        <h2 class="pb-2 border-bottom">Preguntas Frecuentes</h2>
-        <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
-            <div class="list-group">
-                <a href="#modal1" data-bs-toggle="modal" data-target="#modal1"
-                    class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
-                        <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"/>
-                      </svg>
-                    <div class="d-flex gap-2 w-100 justify-content-between">
-                        <div>
-                            <h6 class="mb-0">¿Cómo funciona el Check-in automático?</h6>
-                        </div>
-                    </div>
-                </a>
-                <a href="#modal2" data-bs-toggle="modal" data-target="#modal2"
-                    class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
-                        <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"/>
-                      </svg>
-                    <div class="d-flex gap-2 w-100 justify-content-between">
-                        <div>
-                            <h6 class="mb-0">¿Puedo cambiar un vuelo o la fecha de mi pasaje?</h6>
-                        </div>
-                    </div>
-                </a>
-                <a href="#modal3" data-bs-toggle="modal" data-target="#modal3"
-                    class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
-                        <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"/>
-                      </svg>
-                    <div class="d-flex gap-2 w-100 justify-content-between">
-                        <div>
-                            <h6 class="mb-0">¿Qué pasa si mi vuelo se canceló?</h6>
-                        </div>
-                    </div>
-                </a>
-                <a href="#modal4" data-bs-toggle="modal" data-target="#modal4"
-                    class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
-                        <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"/>
-                      </svg>
-                    <div class="d-flex gap-2 w-100 justify-content-between">
-                        <div>
-                            <h6 class="mb-0">Si quieres elegir una nueva fecha</h6>
-                        </div>
-                    </div>
-                </a>
-                <a href="#modal5" data-bs-toggle="modal" data-target="#modal5"
-                    class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
-                        <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"/>
-                      </svg>
-                    <div class="d-flex gap-2 w-100 justify-content-between">
-                        <div>
-                            <h6 class="mb-0">*Vigencia del pasaje</h6>
-                        </div>
-                    </div>
-                </a>
-                <a href="#modal6" data-bs-toggle="modal" data-target="#modal6"
-                    class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
-                        <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"/>
-                      </svg>
-                    <div class="d-flex gap-2 w-100 justify-content-between">
-                        <div>
-                            <h6 class="mb-0">Si prefieres no viajar y pedir la devolución</h6>
-                        </div>
-                    </div>
-                </a>
+      <h2 class="pb-2 border-bottom">Preguntas Frecuentes</h2>
+      <div
+        class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center"
+      >
+        <div class="list-group">
+          <a
+            href="#modal1"
+            data-bs-toggle="modal"
+            data-target="#modal1"
+            class="list-group-item list-group-item-action d-flex gap-3 py-3"
+            aria-current="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="currentColor"
+              class="bi bi-airplane-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 
+                1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 
+                12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"
+              />
+            </svg>
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">¿Cómo funciona el Check-in automático?</h6>
+              </div>
             </div>
+          </a>
+          <a
+            href="#modal2"
+            data-bs-toggle="modal"
+            data-target="#modal2"
+            class="list-group-item list-group-item-action d-flex gap-3 py-3"
+            aria-current="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="currentColor"
+              class="bi bi-airplane-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"
+              />
+            </svg>
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">
+                  ¿Puedo cambiar un vuelo o la fecha de mi pasaje?
+                </h6>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#modal3"
+            data-bs-toggle="modal"
+            data-target="#modal3"
+            class="list-group-item list-group-item-action d-flex gap-3 py-3"
+            aria-current="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="currentColor"
+              class="bi bi-airplane-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"
+              />
+            </svg>
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">¿Qué pasa si mi vuelo se canceló?</h6>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#modal4"
+            data-bs-toggle="modal"
+            data-target="#modal4"
+            class="list-group-item list-group-item-action d-flex gap-3 py-3"
+            aria-current="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="currentColor"
+              class="bi bi-airplane-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"
+              />
+            </svg>
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">Si quieres elegir una nueva fecha</h6>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#modal5"
+            data-bs-toggle="modal"
+            data-target="#modal5"
+            class="list-group-item list-group-item-action d-flex gap-3 py-3"
+            aria-current="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="currentColor"
+              class="bi bi-airplane-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"
+              />
+            </svg>
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">*Vigencia del pasaje</h6>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#modal6"
+            data-bs-toggle="modal"
+            data-target="#modal6"
+            class="list-group-item list-group-item-action d-flex gap-3 py-3"
+            aria-current="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="currentColor"
+              class="bi bi-airplane-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"
+              />
+            </svg>
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">
+                  Si prefieres no viajar y pedir la devolución
+                </h6>
+              </div>
+            </div>
+          </a>
         </div>
+      </div>
     </div>
 
     <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 Carlos Riquelme, Inc</p>
+      <footer
+        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+      >
+        <p class="col-md-4 mb-0 text-body-secondary">
+          &copy; 2023 Carlos Riquelme, Inc
+        </p>
 
-            <a href="/"
-                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                <svg class="bi me-2" width="40" height="32">
-                    <use xlink:href="#bootstrap" />
-                </svg>
-            </a>
+        <a
+          href="/"
+          class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+        >
+          <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap" />
+          </svg>
+        </a>
 
-            <ul class="nav col-md-4 justify-content-end">
-                <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Inicio</a></li>
-                <li class="nav-item"><a href="destinos.html" class="nav-link px-2 text-body-secondary">Destinos</a></li>
-                <li class="nav-item"><a href="hoteles.html" class="nav-link px-2 text-body-secondary">Hoteles</a></li>
-                <li class="nav-item"><a href="ayuda.html" class="nav-link px-2 text-body-secondary">Centro de Ayuda</a>
-                </li>
-                <li class="nav-item"><a href="contacto.html" class="nav-link px-2 text-body-secondary">Contacto</a></li>
-            </ul>
-        </footer>
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link px-2 text-body-secondary"
+              >Inicio</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="destinos.html" class="nav-link px-2 text-body-secondary"
+              >Destinos</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="hoteles.html" class="nav-link px-2 text-body-secondary"
+              >Hoteles</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="ayuda.html" class="nav-link px-2 text-body-secondary"
+              >Centro de Ayuda</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="contacto.html" class="nav-link px-2 text-body-secondary"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </footer>
     </div>
 
     <!-- Modals -->
     <!-- Modal1 -->
-    <div class="modal fade modal1" id="modal1" tabindex="-1" aria-labelledby="modal1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">¿Cómo funciona el Check-in automático?</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Una vez que hayas realizado la compra de tu pasaje en vuelo nacional, te enviaremos
-                        inmediatamente tu tarjeta de embarque dinámica. Cuando queden 48 horas antes de tu vuelo, ya
-                        tendrás la información actualizada con los últimos detalles de tu viaje.
-                    </p>
-                    <p>
-                        El día de tu vuelo, preséntate en el aeropuerto normalmente. Si viajas con equipaje de mano, solo
-                        tienes que pasar directamente a la puerta de embarque con tu cédula de identidad o pasaporte.
-                    </p>
-                    <p>
-                        En tu tarjeta de embarque dinámica verás actualizado el número de puerta.
-                    </p>
-                    <p>
-                        Si llevas equipaje de bodega, dirígete a nuestro counter o kiosco de autoatención para etiquetar
-                        tus maletas y entregarlas en el counter.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
+    <div
+      class="modal fade modal1"
+      id="modal1"
+      tabindex="-1"
+      aria-labelledby="modal1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              ¿Cómo funciona el Check-in automático?
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Una vez que hayas realizado la compra de tu pasaje en vuelo
+              nacional, te enviaremos inmediatamente tu tarjeta de embarque
+              dinámica. Cuando queden 48 horas antes de tu vuelo, ya tendrás la
+              información actualizada con los últimos detalles de tu viaje.
+            </p>
+            <p>
+              El día de tu vuelo, preséntate en el aeropuerto normalmente. Si
+              viajas con equipaje de mano, solo tienes que pasar directamente a
+              la puerta de embarque con tu cédula de identidad o pasaporte.
+            </p>
+            <p>
+              En tu tarjeta de embarque dinámica verás actualizado el número de
+              puerta.
+            </p>
+            <p>
+              Si llevas equipaje de bodega, dirígete a nuestro counter o kiosco
+              de autoatención para etiquetar tus maletas y entregarlas en el
+              counter.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Modal2 -->
-    <div class="modal fade modal2" id="modal2" tabindex="-1" aria-labelledby="modal2" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">¿Puedo cambiar un vuelo o la fecha de mi pasaje?
-                    </h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Puedes llamar para verificar si tu pasaje te permite cambiar la fecha o destino de tu viaje sin
-                        multas ni diferencias tarifarias.
-                    </p>
-                    <p>
-                        Si el vuelo es cancelado o reprogramado debido a la pandemia COVID-19, o por otras razones de
-                        seguridad o de fuerza mayor, podrás reprogramar tu viaje, solicitar el reembolso del valor
-                        del pasaje o contratar otros servicios de nuestra aerolínea. Conoce más en nuestra sección de
-                        política de cambios.
-                    </p>
-                    <p>
-                        Ten en cuenta que por ahora, el cambio de pasajes en línea sólo está disponible en Chile y
-                        Ecuador.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
+    <div
+      class="modal fade modal2"
+      id="modal2"
+      tabindex="-1"
+      aria-labelledby="modal2"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              ¿Puedo cambiar un vuelo o la fecha de mi pasaje?
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Puedes llamar para verificar si tu pasaje te permite cambiar la
+              fecha o destino de tu viaje sin multas ni diferencias tarifarias.
+            </p>
+            <p>
+              Si el vuelo es cancelado o reprogramado debido a la pandemia
+              COVID-19, o por otras razones de seguridad o de fuerza mayor,
+              podrás reprogramar tu viaje, solicitar el reembolso del valor del
+              pasaje o contratar otros servicios de nuestra aerolínea. Conoce
+              más en nuestra sección de política de cambios.
+            </p>
+            <p>
+              Ten en cuenta que por ahora, el cambio de pasajes en línea sólo
+              está disponible en Chile y Ecuador.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Modal3 -->
-    <div class="modal fade modal3" id="modal3" tabindex="-1" aria-labelledby="modal3" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">¿Qué pasa si mi vuelo se canceló?</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        No te preocupes, llama y podrás aceptar el nuevo itinerario que te proponemos o:
-                    </p>
-                    <ul>
-                        <li>
-                            Elegir una nueva fecha
-                        </li>
-                        <li>
-                            Pedir la devolución
-                        </li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
+    <div
+      class="modal fade modal3"
+      id="modal3"
+      tabindex="-1"
+      aria-labelledby="modal3"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              ¿Qué pasa si mi vuelo se canceló?
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              No te preocupes, llama y podrás aceptar el nuevo itinerario que te
+              proponemos o:
+            </p>
+            <ul>
+              <li>Elegir una nueva fecha</li>
+              <li>Pedir la devolución</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Modal4 -->
-    <div class="modal fade modal4" id="modal4" tabindex="-1" aria-labelledby="modal4" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Si quieres elegir una nueva fecha</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <ul>
-                        <li>Podrás hacer un cambio sin costo en la misma cabina del viaje original.</li>
-                        <li>Podrás reprogramar el nuevo vuelo durante la vigencia de tu pasaje*.</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
+    <div
+      class="modal fade modal4"
+      id="modal4"
+      tabindex="-1"
+      aria-labelledby="modal4"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Si quieres elegir una nueva fecha
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>
+                Podrás hacer un cambio sin costo en la misma cabina del viaje
+                original.
+              </li>
+              <li>
+                Podrás reprogramar el nuevo vuelo durante la vigencia de tu
+                pasaje*.
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Modal5 -->
-    <div class="modal fade modal5" id="modal5" tabindex="-1" aria-labelledby="modal5" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">*Vigencia del pasaje:</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Si tu viaje original comenzaba entre el 1 de marzo y el 31 de diciembre 2020, la vigencia es hasta
-                        el 31 de diciembre de 2021.
-                    </p>
-                    <ul>
-                        <li>Si tu viaje original comienza en 2021, la vigencia es de 12 meses a partir de la fecha del primer
-                            vuelo de tu pasaje.</li>
-                            <li>Si ya comenzaste el viaje, deberás completar el regreso no más allá de 12 meses desde tu primer
-                                vuelo.</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
+    <div
+      class="modal fade modal5"
+      id="modal5"
+      tabindex="-1"
+      aria-labelledby="modal5"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              *Vigencia del pasaje:
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Si tu viaje original comenzaba entre el 1 de marzo y el 31 de
+              diciembre 2020, la vigencia es hasta el 31 de diciembre de 2021.
+            </p>
+            <ul>
+              <li>
+                Si tu viaje original comienza en 2021, la vigencia es de 12
+                meses a partir de la fecha del primer vuelo de tu pasaje.
+              </li>
+              <li>
+                Si ya comenzaste el viaje, deberás completar el regreso no más
+                allá de 12 meses desde tu primer vuelo.
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Modal6 -->
-    <div class="modal fade modal6" id="modal6" tabindex="-1" aria-labelledby="modal6" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Si prefieres no viajar y pedir la devolución
-                    </h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Recibirás un Travel Voucher que podrás canjear por servicios de la aerolínea o dinero. Si usaste tus
-                        millas para canjear tu pasaje, éstas serán devueltas en tu cuenta de socio.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
+    <div
+      class="modal fade modal6"
+      id="modal6"
+      tabindex="-1"
+      aria-labelledby="modal6"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Si prefieres no viajar y pedir la devolución
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Recibirás un Travel Voucher que podrás canjear por servicios de la
+              aerolínea o dinero. Si usaste tus millas para canjear tu pasaje,
+              éstas serán devueltas en tu cuenta de socio.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>
